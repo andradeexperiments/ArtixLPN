@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+pkg="$(ls ~/Others/void-packages/srcpkgs | rofi -dmenu -i -theme-str '@import "rofisrc.rasi"' 20 -p "  ")"
+DIR1=$HOME/Others/void-packages/
+DIR2=$HOME/Others/void-packages/srcpkgs
+CHECK="$(xbps-query -s "$pkg" | wc -l)"
+
+
+if [ $pkg ]
+then
+    if [ "$CHECK" -eq "1" ]
+    then
+        notify-send "Program Installed!"
+        sleep 2
+        exit
+    else
+        cd "$DIR1" || exit
+        git pull
+
+        cd "$DIR2" || exit
+        if [[ -d "$pkg" ]]
+        then
+            cd "$DIR1" || exit
+            notify-send -t 60000 "Installing $pkg" 
+            ./xbps-src pkg "$pkg" && alacritty -e xi --repository hostdir/binpkgs "$pkg"
+        else
+            notify-send "Not found"
+            exit
+        fi
+    fi
+else
+    exit
+fi
+notify-send "$pkg Installed!"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rofi-rbw -r ' ' -t password -a copy --clear-after 20
