@@ -1,0 +1,96 @@
+# Rofi App Launcher
+super + @space
+        rofi -show drun
+
+# Rofi Menus
+super + c
+        ~/Others/Scripts/rofi-menus
+
+# Rofi Powermenu
+super + x
+        ~/Others/Scripts/power-menu.sh
+
+# Rofi Emoji
+super + period
+	rofi -show emoji -modi emoji
+
+##---------- Shortcut Applications ----------##
+
+# Steam
+super + KP_Next
+	steam
+
+# Firefox
+super + KP_End
+	firefox
+
+# Discord
+super + KP_Down
+        discord
+
+##---------- System Applications ----------##
+
+# Terminal emulator
+super + Return
+        alacritty
+
+# Bpytop
+ctrl + shift + Escape
+	alacritty -e bpytop
+
+# Ranger
+super + r
+        alacritty -e ranger
+
+# Pavucontrol
+super + v
+        pavucontrol
+
+# Nautilus
+super + e
+        nautilus
+
+##---------- System Keys ----------##
+
+# Take a screenshot
+@Print
+	scrot ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_screenshot-scrot.png -e 'xclip -selection clipboard -target image/png -i $f'
+
+# Take a screenshot of area
+super + shift + s
+	scrot -s --line mode=edge ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_screenshot-scrot.png -e 'xclip -selection clipboard -target image/png -i $f'
+
+##---------- Volume Keys ----------##
+
+#XF86Audio{Raise}Volume
+#	~/Others/Scripts/volume-plus
+
+#XF86Audio{Lower}Volume
+#	~/Others/Scripts/volume-less
+
+# Change mute
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Change volume
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%
+
+##---------- Media Keys ----------##
+
+# Play and pause
+XF86AudioPlay
+    playerctl play-pause
+
+# Previous and Next
+XF86audio {prev,next}
+   playerctl {previous,next}
+
+
+
+
+
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd

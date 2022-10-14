@@ -41,7 +41,7 @@ font:
   # Normal (roman) font face
   normal:
     # Font family
-    family: JetBrains Mono Nerd Font                
+    family: JetBrains Mono Nerd Font
     style: Medium
 
   # Bold font face
@@ -78,9 +78,11 @@ draw_bold_text_with_bright_colors: true
 ##################################
 
 colors:
+  # Default colors
   primary:
-    background: "#11121D"
-    foreground: "#a9b1d6"
+    background: '#11121D'            #'#13131b'
+    foreground: '#a9b1d6'
+
   normal:
     black: "#32344a"
     red: "#f7768e"
