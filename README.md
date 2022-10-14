@@ -1,3 +1,3 @@
-<h1 align="center"> My Files For Void Linux! </h1>
+<h1 align="center"> My Files For Artix Linux! </h1>
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/105821940/192190593-2b15b458-447c-44c5-af10-0197c40fffad.png"/> </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/105821940/195938743-1b2d5f22-905a-4169-b98e-726ab2b01b77.png"/> </p>
