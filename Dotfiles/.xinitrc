@@ -51,5 +51,5 @@ fi
 setxkbmap br &
 sxhkd &
 pipewire &
-# exec dwm
-exec dbus-run-session bspwm
+exec dwm
+# exec dbus-run-session bspwm
