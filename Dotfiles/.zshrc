@@ -44,6 +44,12 @@ alias ps='pacman -Ss'
 alias pq='pacman -Q'
 alias pu='sudo pacman -Syu'
 
+# GIT
+alias gs='git status'
+alias ga='git add .'
+alias gm='git commit -m'
+alias gp='git push -u origin main'
+
 # XBPS
 #alias xr='sudo xbps-remove'
 #alias xrr='sudo xbps-remove -R'
