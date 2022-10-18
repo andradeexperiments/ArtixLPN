@@ -37,8 +37,8 @@ alias cp='cp -r'
 
 # PACMAN
 alias pr='sudo pacman -R'
-alias prr='sudo pacman -Rs'
-alias pro='sudo pacman -Rs $ (pacman -Qtdq)'
+alias prr='sudo pacman -Rns'
+alias pro='sudo pacman -Rsn $(pacman -Qdtq)'
 alias pl='sudo pacman -S'
 alias ps='pacman -Ss'
 alias pq='pacman -Q'
