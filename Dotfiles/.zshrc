@@ -3,7 +3,7 @@
 ##################################
 #6c7086
 PROMPT='%F{8}$%f '
-#PROMPT='%F{#bb9af7}%1~%f %F{White}%f  '
+PROMPT='%F{#bb9af7}%1~%f %F{White}%f  '
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
