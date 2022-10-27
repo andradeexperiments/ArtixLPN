@@ -39,10 +39,12 @@ alias cp='cp -r'
 alias pr='sudo pacman -R'
 alias prr='sudo pacman -Rns'
 alias pro='sudo pacman -Rsn $(pacman -Qdtq)'
+alias prc='sudo pacman -Sc'
 alias pl='sudo pacman -S'
 alias ps='pacman -Ss'
-alias pq='pacman -Q'
+alias pq='pacman -Qeq'
 alias pu='sudo pacman -Syu'
+alias pacache='sudo du -sh /var/cache/pacman/pkg .cache/yay'
 
 # GIT
 alias gs='git status'
@@ -102,3 +104,4 @@ export PIPEWIRE_LATENCY=128/48000
 
 # PATH.
 #export PATH=$HOME/bin:$PATH
+

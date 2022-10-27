@@ -146,3 +146,4 @@ key_bindings:
   - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
   - { key: Down,      mods: Shift,         action: ScrollLineDown, mode: ~Alt  }
   - { key: Up,        mods: Shift,         action: ScrollLineUp  , mode: ~Alt  }
+
