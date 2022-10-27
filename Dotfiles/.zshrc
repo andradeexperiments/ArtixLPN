@@ -72,6 +72,7 @@ alias ani='ani-cli'
 alias mov='mov-cli'
 alias vis='cli-visualizer'
 alias updatedb='sudo updatedb'
+alias downgrade='sudo downgrade'
 alias neofetch='neofetch --source ~/Others/seahorse.txt'
 #neofetch --source ~/Others/seahorse.txt
 

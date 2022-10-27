@@ -29,6 +29,7 @@ bspc rule -a minecraft-launcher desktop='3'
 bspc rule -a lunarclient desktop='3'
 
 #Autostart
+sxhkd &
 #picom --config $HOME/.config/picom/picom.sample.conf --experimental-backends &
 nitrogen --restore &
 dunst &
