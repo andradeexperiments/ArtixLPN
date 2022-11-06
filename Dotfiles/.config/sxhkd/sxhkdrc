@@ -39,7 +39,7 @@ ctrl + shift + Escape
 	alacritty -e bpytop
 
 # Ranger
-super + r
+super + e
         alacritty -e ranger
 
 # Pavucontrol
@@ -47,7 +47,7 @@ super + v
         pavucontrol
 
 # Nautilus
-super + e
+super + r
         nautilus
 
 ##---------- System Keys ----------##
