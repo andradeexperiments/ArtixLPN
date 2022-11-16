@@ -25,10 +25,10 @@ echo '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }' >> /etc/pi
 
 # Criando diretórios e movendo arquivos
 mkdir Others
-mv Artix-Linux-PixelNight/Scripts ~/Others
-mv Artix-Linux-PixelNight/seahorse.txt ~/Others
-mv Artix-Linux-PixelNight/Dotfiles/.config ~/
+mv ~/Artix-Linux-PixelNight/Scripts ~/Others
+mv ~/Artix-Linux-PixelNight/seahorse.txt ~/Others
+mv ~/Artix-Linux-PixelNight/Dotfiles/.config ~/
 rm -rf ~/.bashrc
-mv Artix-Linux-PixelNight/Dotfiles/.bashrc ~/
-mv Artix-Linux-PixelNight/Dotfiles/.zshrc ~/
-mv Artix-Linux-PixelNight/Dotfiles/.dwm ~/
+mv ~/Artix-Linux-PixelNight/Dotfiles/.bashrc ~/
+mv ~/Artix-Linux-PixelNight/Dotfiles/.zshrc ~/
+mv ~/Artix-Linux-PixelNight/Dotfiles/.dwm ~/
