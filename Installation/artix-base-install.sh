@@ -15,18 +15,18 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 artix.localdomain artix" >> /etc/hosts
 
 # Senha do root
-echo root:password | chpasswd
+echo root:artix | chpasswd
 
 # Pacotes básicos
 pacman -S --noconfirm grub networkmanager networkmanager-runit network-manager-applet bluez-utils bluez-runit ntp-runit gvfs
 
 #BIOS
-grub-install --recheck /dev/sdc
+grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #Usuário
 useradd -m andrade
-echo andrade:password | chpasswd
+echo andrade:artix | chpasswd
 usermod -aG libvirt andrade
 
 echo "andrade ALL=(ALL) ALL" >> /etc/sudoers.d/andrade
