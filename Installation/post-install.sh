@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Habilitando repositórios do Arch Linux
+echo "# Arch" >> /etc/pacman.conf
+echo "[extra]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
+echo "[community]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
+echo "[multilib]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
+
 # Ativiando serviços de internet e bluetooth
 ln -s /etc/runit/sv/NetworkManager /run/runit/service/
 ln -s /etc/runit/sv/bluetoothd /run/runit/service/
