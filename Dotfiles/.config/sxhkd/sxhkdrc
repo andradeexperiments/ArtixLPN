@@ -42,6 +42,10 @@ ctrl + shift + Escape
 super + e
         alacritty -e ranger
 
+# Nemo
+super + r
+	nemo
+
 # Pavucontrol
 super + v
         pavucontrol

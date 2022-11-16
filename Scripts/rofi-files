@@ -14,8 +14,8 @@ DMEDITOR="alacritty -e nvim"
 # An array of options to choose.
 # You can edit this list to add/remove config files.
 declare -a options=(
-"dwm - $HOME/.config/dwm/config.deh.h"
-"dwm blocks - $HOME/.config/dwm/dwmblocks/blocks.deh.h"
+"dwm - $HOME/.config/dwm/config.def.h"
+"dwm blocks - $HOME/.config/dwm/dwmblocks/blocks.def.h"
 "dwm colors - $HOME/.config/dwm/themes/ericmurphy.h"
 "dwm autostart - $HOME/.dwm/autostart.sh"
 "polybar - $HOME/.config/polybar/config.ini"
