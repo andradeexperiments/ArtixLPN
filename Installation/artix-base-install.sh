@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Criando swapfile
-dd if=/dev/zero of=/swapfile bs=1G count=2 status=progress
-chmod 600 /swapfile
-mkswap /swapfile
-swapon /swapfile
-echo "/swapfile none swap defaults 0 0" >> /etc/fstab
-
 # Time Zone
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
