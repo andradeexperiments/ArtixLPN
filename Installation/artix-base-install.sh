@@ -21,11 +21,11 @@ echo root:artix | chpasswd
 pacman -S --noconfirm grub os-prober networkmanager networkmanager-runit network-manager-applet bluez-utils bluez-runit ntp-runit gvfs
 
 # Usuário
-useradd -m andrade
-echo andrade:artix | chpasswd
-usermod -aG libvirt andrade
+useradd -m user
+echo user:artix | chpasswd
+usermod -aG libvirt user
 
-echo "andrade ALL=(ALL) ALL" >> /etc/sudoers.d/andrade
+echo "user ALL=(ALL) ALL" >> /etc/sudoers.d/user
 
 # Instalando Grub BIOS
 grub-install --recheck /dev/sda
