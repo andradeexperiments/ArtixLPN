@@ -18,7 +18,7 @@ echo "127.0.1.1 artix.localdomain artix" >> /etc/hosts
 echo root:artix | chpasswd
 
 # Pacotes básicos
-pacman -S --noconfirm grub networkmanager networkmanager-runit network-manager-applet bluez-utils bluez-runit ntp-runit gvfs
+pacman -S --noconfirm grub os-prober networkmanager networkmanager-runit network-manager-applet bluez-utils bluez-runit ntp-runit gvfs
 
 # Usuário
 useradd -m andrade
@@ -31,6 +31,7 @@ echo "andrade ALL=(ALL) ALL" >> /etc/sudoers.d/andrade
 grub-install --recheck /dev/sda
 
 # Instalando Grub EFI
+#pacman -S --noconfirm efibootmgr
 #grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
 
 # Criando arquivo de config do Grub
