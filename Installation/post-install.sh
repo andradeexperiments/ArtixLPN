@@ -51,8 +51,8 @@ sudo pacman -S --noconfirm linux-headers nvidia-dkms xorg-xset xorg-xinit ntfs-3
 # Instalando e configurando a interface de audio pipewire
 sudo pacman -S --noconfirm pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 sudo cp /usr/share/pipewire/pipewire* /etc/pipewire
-echo '{ path = "/usr/bin/wireplumber" args = "" }' >> /etc/pipewire.conf
-echo '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }' >> /etc/pipewire.conf
+sudo echo '{ path = "/usr/bin/wireplumber" args = "" }' >> /etc/pipewire.conf
+sudo echo '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }' >> /etc/pipewire.conf
 
 # Pacotes rice pós instalação
 sudo pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim polybar rofi nitrogen 
@@ -65,5 +65,5 @@ mv ~/ArtixLPN/Dotfiles/.config ~/
 rm -rf ~/.bashrc
 mv ~/ArtixLPN/Dotfiles/.bashrc ~/
 mv ~/ArtixLPN/Dotfiles/.zshrc ~/
-mv ~ArtixLPN/Dotfiles/.dwm ~/
+mv ~/ArtixLPN/Dotfiles/.dwm ~/
 mv ~/ArtixLPN/Dotfiles/.xinitrc ~/
