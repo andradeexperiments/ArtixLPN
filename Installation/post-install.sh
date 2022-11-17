@@ -3,6 +3,9 @@
 # Para fazer essa instalação é necessário conexão com internet, então utilize:
 # ln -s /etc/runit/sv/NetworkManager /run/runit/service/
 
+# Fazendo update do sistema
+pacman -Syu
+
 # Criando swapfile
 dd if=/dev/zero of=/swapfile bs=1G count=2 status=progress
 chmod 600 /swapfile
