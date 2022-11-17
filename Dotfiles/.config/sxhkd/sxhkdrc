@@ -50,10 +50,6 @@ super + r
 super + v
         pavucontrol
 
-# Nautilus
-super + r
-        nautilus
-
 ##---------- System Keys ----------##
 
 # Take a screenshot

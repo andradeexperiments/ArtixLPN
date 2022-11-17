@@ -55,6 +55,14 @@ echo '{ path = "/usr/bin/wireplumber" args = "" }' >> /etc/pipewire.conf
 echo '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }' >> /etc/pipewire.conf
 
 # Pacotes rice pós instalação
-pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim polybar rofi nitrogen 
+pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim polybar rofi nitrogen pavucontrol ranger nemo scrot xclip playerctl bpytop firefox rofi-emoji
+
+# Instalando o yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ..
+rm -rf yay
+yay -S --noconfirm nerd-fonts-complete
 
 printf "\e[1;32mInstalado! Execute o move-files para finalizar.\e[0m"
