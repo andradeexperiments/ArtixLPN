@@ -12,7 +12,7 @@ echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 
 # Habilitando repositórios do Arch Linux e melhorando velocidade
 
-echo "[universe]"
+echo "[universe]" >> /etc/pacman.conf
 echo "Server = https://universe.artixlinux.org/$arch" >> /etc/pacman.conf
 echo "Server = https://mirror1.artixlinux.org/universe/$arch" >> /etc/pacman.conf
 echo "Server = https://mirror.pascalpuffke.de/artix-universe/$arch" >> /etc/pacman.conf
