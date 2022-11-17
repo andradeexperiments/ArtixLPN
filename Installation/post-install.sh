@@ -4,14 +4,14 @@
 # ln -s /etc/runit/sv/NetworkManager /run/runit/service/
 
 # Fazendo update do sistema
-sudo pacman -Syu --noconfirm
+pacman -Syu --noconfirm
 
 # Criando swapfile
-sudo dd if=/dev/zero of=/swapfile bs=1G count=2 status=progress
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo echo "/swapfile none swap defaults 0 0" >> /etc/fstab
+dd if=/dev/zero of=/swapfile bs=1G count=2 status=progress
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 
 # Habilitando repositórios do Arch Linux e melhorando velocidade
 
@@ -25,8 +25,8 @@ echo 'Server = https://mirror1.cl.netactuate.com/artix/universe/$arch' >> /etc/p
 echo 'Server = https://ftp.crifo.org/artix-universe/' >> /etc/pacman.conf
 echo " " >> /etc/pacman.conf
 
-sudo pacman -Sy --noconfirm
-sudo pacman -S --noconfirm artix-archlinux-support
+pacman -Sy --noconfirm
+pacman -S --noconfirm artix-archlinux-support
 
 echo "# Arch" >> /etc/pacman.conf
 echo "[extra]" >> /etc/pacman.conf
@@ -39,23 +39,26 @@ echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 echo " " >> /etc/pacman.conf
 
-sudo pacman -Sy --noconfirm
+pacman -Sy --noconfirm
 
 # Ativiando serviço de bluetooth
 #ln -s /etc/runit/sv/NetworkManager /run/runit/service/
-sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service/
+ln -s /etc/runit/sv/bluetoothd /run/runit/service/
 
 # Pacotes básicos pós instalação (ao instalar o pacote nvidia, xorg e diversos outros pacotes são instalados juntos) 
-sudo pacman -S --noconfirm linux-headers nvidia-dkms xorg-xset xorg-xinit ntfs-3g numlockx
+pacman -S --noconfirm linux-headers nvidia-dkms xorg-xset xorg-xinit ntfs-3g numlockx
 
 # Instalando e configurando a interface de audio pipewire
-sudo pacman -S --noconfirm pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
-sudo cp /usr/share/pipewire/pipewire* /etc/pipewire
-sudo echo '{ path = "/usr/bin/wireplumber" args = "" }' >> /etc/pipewire.conf
-sudo echo '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }' >> /etc/pipewire.conf
+pacman -S --noconfirm pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+cp /usr/share/pipewire/pipewire* /etc/pipewire
+echo '{ path = "/usr/bin/wireplumber" args = "" }' >> /etc/pipewire.conf
+echo '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }' >> /etc/pipewire.conf
 
 # Pacotes rice pós instalação
-sudo pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim polybar rofi nitrogen 
+pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim polybar rofi nitrogen 
+
+# Sair do root
+exit
 
 # Criando diretórios e movendo arquivos
 mkdir ~/Others
