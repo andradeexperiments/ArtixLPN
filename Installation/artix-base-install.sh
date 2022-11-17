@@ -20,11 +20,15 @@ echo root:artix | chpasswd
 # Pacotes básicos
 pacman -S --noconfirm grub networkmanager networkmanager-runit network-manager-applet bluez-utils bluez-runit ntp-runit gvfs
 
-#Usuário
+# Usuário
 useradd -m andrade
 echo andrade:artix | chpasswd
 usermod -aG libvirt andrade
 
 echo "andrade ALL=(ALL) ALL" >> /etc/sudoers.d/andrade
 
-printf "\e[1;32mPronto! Digite exit, umount -a e reboot.\e[0m"
+# Configurando Grub
+grub-install --recheck /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+printf "\e[1;32mPronto! Digite exit e depois reboot.\e[0m"
