@@ -27,8 +27,13 @@ usermod -aG libvirt andrade
 
 echo "andrade ALL=(ALL) ALL" >> /etc/sudoers.d/andrade
 
-# Configurando Grub
+# Instalando Grub BIOS
 grub-install --recheck /dev/sda
+
+# Instalando Grub EFI
+#grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
+
+# Criando arquivo de config do Grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 printf "\e[1;32mPronto! Digite exit e depois reboot.\e[0m"
