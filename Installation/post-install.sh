@@ -58,12 +58,12 @@ echo '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }' >> /etc/pi
 pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim polybar rofi nitrogen 
 
 # Criando diretórios e movendo arquivos
-mkdir ~/Others
-mv ~/ArtixLPN/Scripts ~/Others
-mv ~/ArtixLPN/seahorse.txt ~/Others
-mv ~/ArtixLPN/Dotfiles/.config ~/
-rm -rf ~/.bashrc
-mv ~/ArtixLPN/Dotfiles/.bashrc ~/
-mv ~/ArtixLPN/Dotfiles/.zshrc ~/
-mv ~/ArtixLPN/Dotfiles/.dwm ~/
-mv ~/ArtixLPN/Dotfiles/.xinitrc ~/
+mkdir $HOME/Others
+mv $HOME/ArtixLPN/Scripts $HOME/Others
+mv $HOME/ArtixLPN/seahorse.txt $HOME/Others
+mv $HOME/ArtixLPN/Dotfiles/.config $HOME/
+rm -rf $HOME/.bashrc
+mv $HOME/ArtixLPN/Dotfiles/.bashrc $HOME/
+mv $HOME/ArtixLPN/Dotfiles/.zshrc $HOME/
+mv $HOME/ArtixLPN/Dotfiles/.dwm $HOME/
+mv $HOME/ArtixLPN/Dotfiles/.xinitrc $HOME/
