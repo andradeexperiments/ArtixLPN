@@ -1,3 +1,11 @@
+# Instalando o yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ..
+rm -rf yay
+yay -S --noconfirm nerd-fonts-complete
+
 # Criando diretórios e movendo arquivos
 mkdir ~/Others
 mv ~/ArtixLPN/Scripts ~/Others/
