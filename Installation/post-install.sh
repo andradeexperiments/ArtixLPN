@@ -35,10 +35,10 @@ pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim p
 
 # Criando diretórios e movendo arquivos
 mkdir Others
-mv ~/Artix-Linux-PixelNight/Scripts ~/Others
-mv ~/Artix-Linux-PixelNight/seahorse.txt ~/Others
-mv ~/Artix-Linux-PixelNight/Dotfiles/.config ~/
+mv ~/ArtixLPN/Scripts ~/Others
+mv ~/ArtixLPN/seahorse.txt ~/Others
+mv ~/ArtixLPN/Dotfiles/.config ~/
 rm -rf ~/.bashrc
-mv ~/Artix-Linux-PixelNight/Dotfiles/.bashrc ~/
-mv ~/Artix-Linux-PixelNight/Dotfiles/.zshrc ~/
-mv ~/Artix-Linux-PixelNight/Dotfiles/.dwm ~/
+mv ~/ArtixLPN/Dotfiles/.bashrc ~/
+mv ~/ArtixLPN/Dotfiles/.zshrc ~/
+mv ~/ArtixLPN/Dotfiles/.dwm ~/
