@@ -38,8 +38,6 @@ echo " " >> /etc/pacman.conf
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 echo " " >> /etc/pacman.conf
-echo "# Misc options"
-echo "ParallelDownloads = 10" >> /etc/pacman.conf
 
 pacman -Sy --noconfirm
 
@@ -61,11 +59,11 @@ pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim p
 
 # Criando diretórios e movendo arquivos
 mkdir ~/Others
-mv /ArtixLPN/Scripts ~/Others
-mv /ArtixLPN/seahorse.txt ~/Others
-mv /ArtixLPN/Dotfiles/.config ~/
+mv ~/ArtixLPN/Scripts ~/Others
+mv ~/ArtixLPN/seahorse.txt ~/Others
+mv ~/ArtixLPN/Dotfiles/.config ~/
 rm -rf ~/.bashrc
-mv /ArtixLPN/Dotfiles/.bashrc ~/
-mv /ArtixLPN/Dotfiles/.zshrc ~/
-mv /ArtixLPN/Dotfiles/.dwm ~/
-mv /ArtixLPN/Dotfiles/.xinitrc ~/
+mv ~/ArtixLPN/Dotfiles/.bashrc ~/
+mv ~/ArtixLPN/Dotfiles/.zshrc ~/
+mv ~/ArtixLPN/Dotfiles/.dwm ~/
+mv ~/ArtixLPN/Dotfiles/.xinitrc ~/
