@@ -17,12 +17,12 @@ echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 
 echo "[universe]" >> /etc/pacman.conf
 echo " " >> /etc/pacman.conf
-echo "Server = https://universe.artixlinux.org/$arch" >> /etc/pacman.conf
-echo "Server = https://mirror1.artixlinux.org/universe/$arch" >> /etc/pacman.conf
-echo "Server = https://mirror.pascalpuffke.de/artix-universe/$arch" >> /etc/pacman.conf
-echo "Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch" >> /etc/pacman.conf
-echo "Server = https://mirror1.cl.netactuate.com/artix/universe/$arch" >> /etc/pacman.conf
-echo "Server = https://ftp.crifo.org/artix-universe/" >> /etc/pacman.conf
+echo 'Server = https://universe.artixlinux.org/$arch' >> /etc/pacman.conf
+echo 'Server = https://mirror1.artixlinux.org/universe/$arch' >> /etc/pacman.conf
+echo 'Server = https://mirror.pascalpuffke.de/artix-universe/$arch' >> /etc/pacman.conf
+echo 'Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch' >> /etc/pacman.conf
+echo 'Server = https://mirror1.cl.netactuate.com/artix/universe/$arch' >> /etc/pacman.conf
+echo 'Server = https://ftp.crifo.org/artix-universe/' >> /etc/pacman.conf
 echo " " >> /etc/pacman.conf
 
 pacman -Sy --noconfirm
