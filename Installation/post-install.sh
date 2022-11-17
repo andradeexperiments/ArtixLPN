@@ -46,7 +46,7 @@ pacman -Sy --noconfirm
 ln -s /etc/runit/sv/bluetoothd /run/runit/service/
 
 # Pacotes básicos pós instalação (ao instalar o pacote nvidia, xorg e diversos outros pacotes são instalados juntos) 
-pacman -S --noconfirm linux-headers nvidia-dkms xorg-xset ntfs-3g numlockx
+pacman -S --noconfirm linux-headers nvidia-dkms xorg-xset xorg-xinit ntfs-3g numlockx
 
 # Instalando e configurando a interface de audio pipewire
 pacman -S --noconfirm pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
@@ -58,12 +58,12 @@ echo '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }' >> /etc/pi
 pacman -S --noconfirm alacritty dunst neofetch picom ranger sxhkd bspwm neovim polybar rofi nitrogen 
 
 # Criando diretórios e movendo arquivos
-mkdir $HOME/Others
-mv $HOME/ArtixLPN/Scripts $HOME/Others
-mv $HOME/ArtixLPN/seahorse.txt $HOME/Others
-mv $HOME/ArtixLPN/Dotfiles/.config $HOME/
-rm -rf $HOME/.bashrc
-mv $HOME/ArtixLPN/Dotfiles/.bashrc $HOME/
-mv $HOME/ArtixLPN/Dotfiles/.zshrc $HOME/
-mv $HOME/ArtixLPN/Dotfiles/.dwm $HOME/
-mv $HOME/ArtixLPN/Dotfiles/.xinitrc $HOME/
+mkdir ~/home/user/Others/
+mv ~/home/user/ArtixLPN/Scripts ~/home/user/Others/
+mv ~/home/user/ArtixLPN/seahorse.txt ~/home/user/Others/
+mv ~/home/user/ArtixLPN/Dotfiles/.config ~/home/user/
+rm -rf ~/home/user/.bashrc
+mv ~/home/user/ArtixLPN/Dotfiles/.bashrc ~/home/user/
+mv ~/home/user/ArtixLPN/Dotfiles/.zshrc ~/home/user/
+mv ~/home/user/ArtixLPN/Dotfiles/.dwm ~/home/user/
+mv ~/home/user/ArtixLPN/Dotfiles/.xinitrc ~/home/user/
