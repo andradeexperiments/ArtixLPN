@@ -38,6 +38,7 @@ echo " " >> /etc/pacman.conf
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 echo " " >> /etc/pacman.conf
+echo "# Misc options"
 echo "ParallelDownloads = 10" >> /etc/pacman.conf
 
 pacman -Sy --noconfirm
