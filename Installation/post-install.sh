@@ -22,7 +22,7 @@ ln -s /etc/runit/sv/NetworkManager /run/runit/service/
 ln -s /etc/runit/sv/bluetoothd /run/runit/service/
 
 # Pacotes básicos pós instalação (ao instalar o pacote nvidia, xorg e diversos outros pacotes são instalados juntos) 
-pacman -S --noconfirm nvidia xorg-xset ntfs-3g numlockx
+pacman -S --noconfirm linux-headers nvidia-dkms xorg-xset ntfs-3g numlockx
 
 # Instalando e configurando a interface de audio pipewire
 pacman -S --noconfirm pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
