@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Para fazer essa instalação é necessário conexão com internet, então utilize:
+# ln -s /etc/runit/sv/NetworkManager /run/runit/service/
+
 # Criando swapfile
 dd if=/dev/zero of=/swapfile bs=1G count=2 status=progress
 chmod 600 /swapfile
@@ -17,8 +20,8 @@ echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 echo "ParallelDownloads = 10" >> /etc/pacman.conf
 
-# Ativiando serviços de internet e bluetooth
-ln -s /etc/runit/sv/NetworkManager /run/runit/service/
+# Ativiando serviço de bluetooth
+#ln -s /etc/runit/sv/NetworkManager /run/runit/service/
 ln -s /etc/runit/sv/bluetoothd /run/runit/service/
 
 # Pacotes básicos pós instalação (ao instalar o pacote nvidia, xorg e diversos outros pacotes são instalados juntos) 
