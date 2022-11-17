@@ -21,7 +21,6 @@ echo "Server = https://mirror1.cl.netactuate.com/artix/universe/$arch" >> /etc/p
 echo "Server = https://ftp.crifo.org/artix-universe/" >> /etc/pacman.conf
 
 pacman -S --noconfirm artix-archlinux-support
-artix-archlinux-support
 
 echo "# Arch" >> /etc/pacman.conf
 echo "[extra]" >> /etc/pacman.conf
