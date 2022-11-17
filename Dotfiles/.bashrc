@@ -1,5 +1,8 @@
 # .bashrc
 
+export LANG="en_US.UTF-8"
+export LC_COLLATE="C"
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

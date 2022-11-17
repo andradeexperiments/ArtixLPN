@@ -10,7 +10,7 @@ yay -S --noconfirm nerd-fonts-complete
 mkdir ~/Others
 mv ~/ArtixLPN/Scripts ~/Others/
 mv ~/ArtixLPN/seahorse.txt ~/Others/
-mv ~/ArtixLPN/Dotfiles/.config ~/
+mv ~/ArtixLPN/Dotfiles/.config/* ~/.config/
 rm -rf ~/.bashrc
 mv ~/ArtixLPN/Dotfiles/.bashrc ~/
 mv ~/ArtixLPN/Dotfiles/.zshrc ~/
