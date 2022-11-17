@@ -1,5 +1,5 @@
 #!/bin/bash
-#oi
+
 # Para fazer essa instalação é necessário conexão com internet, então utilize:
 # ln -s /etc/runit/sv/NetworkManager /run/runit/service/
 
