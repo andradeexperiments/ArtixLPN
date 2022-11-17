@@ -1,5 +1,5 @@
 #!/bin/bash
-#oi
+
 # Time Zone
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
