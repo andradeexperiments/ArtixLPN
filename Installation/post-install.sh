@@ -4,7 +4,7 @@
 # ln -s /etc/runit/sv/NetworkManager /run/runit/service/
 
 # Fazendo update do sistema
-pacman -Syu
+pacman -Syu --noconfirm
 
 # Criando swapfile
 dd if=/dev/zero of=/swapfile bs=1G count=2 status=progress
