@@ -23,6 +23,7 @@ echo "Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch" 
 echo "Server = https://mirror1.cl.netactuate.com/artix/universe/$arch" >> /etc/pacman.conf
 echo "Server = https://ftp.crifo.org/artix-universe/" >> /etc/pacman.conf
 
+pacman -Sy --noconfirm
 pacman -S --noconfirm artix-archlinux-support
 
 echo "# Arch" >> /etc/pacman.conf
@@ -33,6 +34,8 @@ echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 echo "ParallelDownloads = 10" >> /etc/pacman.conf
+
+pacman -Sy --noconfirm
 
 # Ativiando serviço de bluetooth
 #ln -s /etc/runit/sv/NetworkManager /run/runit/service/
