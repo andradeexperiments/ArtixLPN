@@ -11,8 +11,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ############# BÁSICO #############
 ##################################
 
-export LANG="en_US.UTF-8"
-export LC_COLLATE="C"
 autoload -U compinit
 compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
