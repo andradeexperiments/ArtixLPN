@@ -11,7 +11,7 @@ pacman -Syu --noconfirm
 
 # Criando swapfile
 dd if=/dev/zero of=/swapfile bs=1G count=2 status=progress
-chmod 600 /swapfile
+chmod 600 /swapfilegvfs-mtp
 mkswap /swapfile
 swapon /swapfile
 echo "/swapfile none swap defaults 0 0" >> /etc/fstab
@@ -49,7 +49,7 @@ pacman -Sy --noconfirm
 ln -s /etc/runit/sv/bluetoothd /run/runit/service/
 
 # Pacotes básicos pós instalação (ao instalar o pacote nvidia, xorg e diversos outros pacotes são instalados juntos) 
-pacman -S --noconfirm linux-headers nvidia-dkms xorg-xset xorg-xinit ntfs-3g numlockx
+pacman -S --noconfirm linux-headers nvidia-dkms xorg-xset xorg-xinit ntfs-3g numlockx gvfs-mtp gvfs-gphoto2
 
 # Instalando e configurando a interface de audio pipewire
 pacman -S --noconfirm pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
